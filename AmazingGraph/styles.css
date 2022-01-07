@@ -44,49 +44,39 @@ a:hover {
 .content {
     display: flex;
     justify-content: center;
-    margin: 1rem 5%;
+    margin: 1rem 2%;
 }
 .content-home {
     width: 100%;
     position: relative;
+    background-image: url(assets/team.jpg);
+    background-repeat: no-repeat;
+    background-size: 62.5% auto;
+    background-position: 100% -8%
 }
 
 .content-text {
-    padding-left: 50px;
+    padding: 0 0 15px 7%;
     color: #766F68;
 }
 .content-text h1 {
     font-size: clamp(1.5rem, 5.5vw, 4.4rem);
     margin-bottom: 1.5rem;
 }
-.content-text p {
+.p {
     font-size: clamp(.9rem, 2.3vw, 1.9rem);
-    margin-bottom: 3.5rem;
+    margin-bottom: 5%;
 }
-
 .content-img {
-    width: 100%;
-    display: flex;
-    position: absolute;
-    top: 10px;
-    right: 0;
-    z-index: -10;
-}
-.img-span {
-    min-width: 37%;
-    visibility:hidden;
-}
-.content-img img {
-    max-width: 750px;
-    width: 70%;
+    display: none;
 }
 .home-btn {
+    width: 27%;
     background-color: #D2872C;
-    font-size: 1.3rem;
     color: white;
     border: none;
-    border-radius: 20px;
-    padding: 2% 9%;
+    border-radius: 15px;
+    padding: 2% 0;
     font-weight: bold;
 }
 .home-btn:hover {
@@ -163,18 +153,8 @@ a:hover {
     }
 
     /*============== CONTEÚDO ===================*/
-    .content img {
-        width: 58%;
-    }
-    .img-span {
-        min-width: 42%;
-    }
-    .content-text p{
-        margin-bottom: 1rem;
-    }
+
     .home-btn {
-        padding: 0.5rem 8%;
-        font-size: 1rem;
         border-radius: 10px;
     }
 
@@ -182,33 +162,29 @@ a:hover {
 
 
 @media (max-width:600px) {
+
     .content-home {
-        display: flex;
-        flex-direction: column-reverse;
-        text-align: center;
+        background: none;
     }
     .content-text {
         padding: 0;
+        text-align: center;
     }
     .content-text h1 {
         font-size: clamp(1.5rem, 9vw, 4.4rem);
     }
-    .content-text p {
+    .p {
         font-size: clamp(0.75rem, 4.2vw, 1.9rem);
     }
     .content-img {
-        position: initial;
-    }
-    .img-span {
-        display:none;
-    }
-    .content-img img{
+        display: initial;
         width: 100%;
         padding: 0 5% 1.5rem;
     }
+    
     .home-btn {
-        padding: 1rem    22%;
-        font-size: 1.1rem;
+        width: auto;
+        padding: 1.2rem 18%;
         border-radius: 18px;
     }
 }
@@ -220,9 +196,5 @@ a:hover {
     }
     #menu a {
         font-size: 1rem;
-    }
-    .home-btn {
-        font-size: 1rem;
-        border-radius: 18px;
     }
 }
