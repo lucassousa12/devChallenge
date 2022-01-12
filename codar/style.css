@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+ul, a {
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+a:hover {
+  color: gray;  
+}
+
+/*=========== Gereics ============*/
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button {
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background-color: #D6000D;
+    margin: 0 1px;
+}
+.button:hover {
+    color: #D6000D;
+    background: transparent;
+    border: 1px solid #D6000D;
+    margin: 0;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+}
+
+/*=========== HEADER ============*/
+.header{
+    padding: 2rem 5%;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #D6000D;
+    position: relative;
+}
+.logo span {
+    color: black;
+    position: absolute;
+    right: -6px;
+}
+.menu ul {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+.btn-login {
+    padding: 0.3rem 2rem;
+}
+
+
+/*=========== CONTENT =========*/
+.home {
+    padding: 50px 5% 50px 10% ;
+}
+.content {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+}
+.box{
+    flex: 1 0 45%;
+}
+.home section:nth-child(1) {
+    padding-bottom: 15%;
+}
+.c1-text {
+    padding-top: 5rem;
+    font-weight: bold;
+}
+.c1-text p:nth-child(1) {
+    font-size: clamp(.5rem, 1.9vw, 1.65rem);
+}
+.c1-text p:nth-child(2) {
+    font-size: clamp(1rem, 5vw, 4.5rem);
+    color: #D6000D;
+    margin-bottom: 2rem;
+}
+.c1-btn {
+    padding: 0.3rem 3rem;
+    font-size: clamp(1rem, 2.2vw, 2rem);
+}
+.c2-text {
+    padding-top: 10%;
+}
+.c2-text ul li {
+    font-size: clamp(1rem, 2.2vw, 2rem);
+    padding: 5px 0;
+}
+.fas {
+    color: #D6000D;
+}
+
+.form-tel fieldset {
+    border: none;
+}
+.form-tel legend {
+    font-size: clamp(1rem, 2vw, 2.5vw);
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.form-tel input {
+    border: none;
+    width: 25%;
+    height: 2.5rem;
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding-left: 1rem;
+    margin-right: 10px;
+}
+.form-tel button {
+    padding: 0 3%;
+    height: 2.5rem;
+}
+
+.feedback {
+    padding-top: 15%;
+    display: flex;
+    gap: 3%;
+}
+.user {
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+    background-color: rgb(223, 223, 223);
+    padding: 1rem 1.5rem;
+}
+.user-photo {
+    flex: 1;
+}
+.user-photo div {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #D6000D;
+}
+.user-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 5;
+    padding: .5rem .5rem;
+    font-size: clamp(.8rem, 1.4vw, 1.2rem);
+}
+.user-information p:nth-child(1) {
+    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+}
+.user-information p:nth-child(2) {
+    font-weight: bold;
+}
+
+/* ============== Footer ========*/
+.footer {   
+    display: flex;
+    gap: 5%;
+    padding: 5%;
+    background-color: black;
+    color: white;
+}
+.footer section {
+    flex: 1;
+}
+.footer section li, .footer section  a {
+    color: white;
+    padding-bottom: .5rem;
+}
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: white
+}
+.footer h1{
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    padding: 10px 0;
+}
+.social {
+    display: flex;
+    gap: 1rem;
+}
+.social li {
+    width: 35px;
+}
+.social i {
+    color: #D6000D;
+    font-size: 30px;
+}
+.social i:hover {
+    font-size: 35px; 
+    cursor: pointer;
+}
+
+/*============ Mobile =================*/
+@media(max-width:630px) {
+
+    /* ==============    HEADER ==============*/
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-login {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+    }
+    .menu ul {
+        gap: 15%
+    }
+
+    /* ============= Content ==============*/
+    .content, .feedback, .footer {
+        flex-direction: column;
+    }
+    .box {
+        flex: 1 0 100%;
+    }
+    .c1-text {
+        text-align: center;
+    }
+    .c1-text p:nth-child(1) {
+        font-size: clamp(.5rem, 4.5vw, 1.65rem);
+    }
+    .c1-text p:nth-child(2) {
+        font-size: clamp(1rem, 11.8vw, 4.5rem);
+    }
+    .c1-btn {
+        padding: 2.5% 25%;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+    .home section:nth-child(2) {
+        flex-direction: column-reverse;
+        padding-left: 10%;
+
+    }
+    .c2-text ul li{
+        font-size: clamp(1rem, 4vw, 2rem);
+    }
+    .img-2 {
+        width: 60%;
+    }
+
+
+    .form-tel fieldset {
+        margin: 5% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .form-tel legend {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+    .form-tel input, .form-tel button{
+        width: 62%;
+        margin: 0;
+    }
+    
+    .feedback {
+        gap: 1rem;
+    }
+
+    .footer section {
+        margin-bottom: 1rem;
+    }
+    .footer section:nth-child(1) {
+        text-align: center;
+    }
+}
