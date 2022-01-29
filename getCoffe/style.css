@@ -1,0 +1,164 @@
+:root {
+    --black: #242424;
+    --yellow: #FCA60F;
+    --brown: #C95E20;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunite', sans-serif;
+    color: var(--black);
+}
+a, li {
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+a:hover {
+    color: rgb(160, 160, 160);
+}
+
+/* HEADER =============*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 7.1%;
+    box-shadow: 2px 0  5px rgb(147, 147, 147);
+}
+header img {
+    width: 174px;
+}
+header ul {
+    display: flex;
+    gap: 59px;
+}
+header li a {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+header li a:hover {
+    color: var(--brown);
+}
+header li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--brown); 
+    transition: width 0.5s;
+} 
+header li a:hover::after {
+    width: 100%;
+}
+
+/* MAIN =============*/
+main {
+    padding: 14.2% 15.8% 7.1% 7.1%;
+    background-image: url(./assets/forma1.svg), url(./assets/forma2.svg);
+    background-repeat: no-repeat;
+    background-position: left -150px center, right -150px top;
+    
+}
+main section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+}
+.container p {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 5%;
+}
+.container button {
+    width: 290px;
+    height: 58px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--yellow);
+    border: 1.5px solid transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+}
+.container button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--yellow);
+    border-color: var(--yellow);
+}
+.social-icons {
+    display: flex;
+    align-items: end;
+    width: 120px;
+    height: 35px;
+}
+.social-icons svg {
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+}
+.social-icons svg:hover {
+    cursor: pointer;
+    margin: 0 2.5px;
+    width: 35px;
+    height: 35px;
+}
+
+/* Scroll down =============*/
+.scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+@media(max-width:955px) {
+    main {
+        gap: 10px;
+        padding: 14.2% 10% 10% 7.1%;
+        background-position: left -220px top, right -280px bottom ;
+    }
+    .container p {
+        font-size: clamp(1rem, 3.3vw, 2rem);
+    }
+}
+
+@media(max-width:600px) {
+    header {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    header ul {
+        gap: 32px;
+    }
+    main {
+        padding: 10% 5%;
+    }
+    main section {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-bottom: 20px;
+        gap: 30px;
+    }
+    .container p {
+        font-size: clamp(1rem, 5vw, 2rem);  
+    }
+    .container button {
+        font-size: 1.2rem;
+        width: auto;
+        padding: 0 10%;
+    }
+    .social-icons {
+        margin: 35px auto;
+    }
+    .copo svg {
+        width: 50%;
+        min-width: 125px;
+    }
+}
